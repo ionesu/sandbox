@@ -1,4 +1,6 @@
 """
+https://contest.yandex.ru/contest/22450/run-report/70514253/
+
 Timothy is looking for a place to build a house for himself. The street he wants to live on has length n, that is,
 it consists of n identical consecutive sections. Each plot is either empty or a house has already been built on it.
 
@@ -52,41 +54,3 @@ def read_input() -> Tuple[int, List[int]]:
 
 n, sections = read_input()
 print(' '.join(map(str, closest_zero(n, sections))))
-
-
-# from typing import List
-#
-#
-# def closest_zero(neighbours: str) -> List[int]:
-#     neighbours_list = neighbours.split('0')
-#     neighbours_segments_length = len(neighbours_list)
-#     distances = []
-#     for index, neighbour in enumerate(neighbours_list):
-#         segment = len(neighbour)
-#
-#         if neighbour and index + 1 == neighbours_segments_length:
-#             distances += [0] + list(range(1, segment + 1))
-#
-#         elif neighbour and index == 0:
-#             distances += reversed(list(range(1, segment + 1)))
-#
-#         elif neighbour:
-#             segment_module = segment % 2
-#             half_list = list(range(1, segment // 2 + 1 + segment_module))
-#             distances += [0] + half_list
-#             distances += half_list[len(half_list) - 1 - segment_module::-1] if len(half_list) > 1 else []
-#
-#         elif not neighbour and index != 0:
-#             distances += [0]
-#
-#     return distances
-#
-#
-# def read_input() -> str:
-#     n = int(input())
-#     arr = str(input().strip().replace(' ', ''))
-#     return arr
-#
-#
-# sections = read_input()
-# print(' '.join(map(str, closest_zero(sections))))

@@ -1,4 +1,6 @@
 """
+https://contest.yandex.ru/contest/22450/run-report/70517932/
+
 The game "Speed typing simulator" is a field of 4x4 keys. In it, at each round, a configuration of numbers and
 points appears. Either a dot or a number from 1 to 9 is written on the key.
 
