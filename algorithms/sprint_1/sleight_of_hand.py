@@ -26,8 +26,8 @@ def sleight_of_hand(k: int, board: str) -> int:
     board_keys_to_count = Counter([*board])
     board_keys_to_count.pop('.', None)
     counter = 0
-    for key, value in board_keys_to_count.items():
-        counter += 1 if value <= 2*k else 0
+    for value in board_keys_to_count.values():
+        counter += 1 if value <= 2 * k else 0
 
     return counter
 
@@ -36,12 +36,13 @@ def read_input() -> Tuple[int, str]:
     k = int(input())
     board = ''
 
-    for i in range(4):
+    for _ in range(4):
         line = sys.stdin.readline().rstrip()
         board += line
 
     return k, board
 
 
-k, board = read_input()
-print(sleight_of_hand(k, board))
+if __name__ == "__main__":
+    k, board = read_input()
+    print(sleight_of_hand(k, board))

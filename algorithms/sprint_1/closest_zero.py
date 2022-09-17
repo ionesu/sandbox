@@ -30,7 +30,7 @@ def closest_zero(n: int, sections: List[int]) -> List[int]:
             distances += list(range(1, n - previous_zero_position))
         elif section == 0 and index != 0 and previous_zero_position < 0:
             distances += reversed(list(range(1, index + 1)))
-            distances += [0]
+            distances.append(0)
             previous_zero_position = index
         elif section == 0 and index - 1 != previous_zero_position >= 0:
             segment = index - previous_zero_position - 1
@@ -40,7 +40,7 @@ def closest_zero(n: int, sections: List[int]) -> List[int]:
             distances += half_list[len(half_list) - 1 - segment_module::-1] + [0] if segment > 1 else [0]
             previous_zero_position = index
         elif section == 0:
-            distances += [0]
+            distances.append(0)
             previous_zero_position = index
 
     return distances
@@ -52,5 +52,6 @@ def read_input() -> Tuple[int, List[int]]:
     return n, arr
 
 
-n, sections = read_input()
-print(' '.join(map(str, closest_zero(n, sections))))
+if __name__ == "__main__":
+    n, sections = read_input()
+    print(' '.join(map(str, closest_zero(n, sections))))
