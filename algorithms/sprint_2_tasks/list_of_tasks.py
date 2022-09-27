@@ -22,7 +22,6 @@ def solution(task_head):
     current = task_head
 
     while current:
-        print(current.value)
         current = current.next_item
 
 
