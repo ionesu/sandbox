@@ -45,7 +45,7 @@ class StackMax:
 
 
     def get_max(self):
-        return max(self.items) if self.items else None
+        return max(self.items, default=None)
 
 
 
