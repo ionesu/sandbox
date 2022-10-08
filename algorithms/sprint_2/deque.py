@@ -1,4 +1,6 @@
 """
+https://contest.yandex.ru/contest/22781/run-report/71460572/
+
 Gosha implemented the Dec data structure, the maximum size of which is determined by a given number.
 Methods push_back(x), push_front(x), pop_back(), pop_front() worked correctly. But, if there were many elements
 in the deck, the program worked for a very long time. The fact is that not all operations were performed in O(1).
