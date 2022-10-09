@@ -30,6 +30,9 @@ push_front 861
 push_front -819
 pop_back
 pop_back
+
+The time complexity of the implementation is O(n), since we are scanning the input.
+Time taken by push and pop operations is constant i.e. O(1) constant time complexity.
 """
 import sys
 

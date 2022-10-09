@@ -61,6 +61,9 @@ Print a single number — the value of the expression.
 
 Input example:
 2 1 + 3 *
+
+The time complexity of the implementation is O(n), since we are scanning the input.
+Time taken by push and pop operations is constant i.e. O(1) constant time complexity.
 """
 
 
