@@ -97,9 +97,9 @@ def read_input():
         line = sys.stdin.readline().rstrip()
 
         if 'push_front' in line:
-            deque.push_front(int(line.split(' ')[1]))
+            deque.push_front(int(line.split()[1]))
         elif 'push_back' in line:
-            deque.push_back(int(line.split(' ')[1]))
+            deque.push_back(int(line.split()[1]))
         elif 'pop_back' == line:
             print(deque.pop_back())
         elif 'pop_front' == line:
