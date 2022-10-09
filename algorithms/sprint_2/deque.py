@@ -37,31 +37,31 @@ import sys
 class Deque:
 
     def __init__(self, n):
-        self.deque = [None] * n
-        self.max_n = n
-        self.head = 0
-        self.tail = 1
-        self.size = 0
+        self._deque = [None] * n
+        self._max_n = n
+        self._head = 0
+        self._tail = 1
+        self._size = 0
 
 
     def is_empty(self):
-        return self.size == 0
+        return self._size == 0
 
 
     def push_front(self, value):
-        if self.size != self.max_n:
-            self.deque[self.head] = value
-            self.head = (self.head - 1) % self.max_n
-            self.size += 1
+        if self._size != self._max_n:
+            self._deque[self._head] = value
+            self._head = (self._head - 1) % self._max_n
+            self._size += 1
         else:
             print('error')
 
 
     def push_back(self, value):
-        if self.size != self.max_n:
-            self.deque[self.tail] = value
-            self.tail = (self.tail + 1) % self.max_n
-            self.size += 1
+        if self._size != self._max_n:
+            self._deque[self._tail] = value
+            self._tail = (self._tail + 1) % self._max_n
+            self._size += 1
         else:
             print('error')
 
@@ -70,10 +70,10 @@ class Deque:
         if self.is_empty():
             return 'error'
         else:
-            x = self.deque[self.tail - 1]
-            self.deque[self.tail - 1] = None
-            self.tail = (self.tail - 1) % self.max_n
-            self.size -= 1
+            x = self._deque[self._tail - 1]
+            self._deque[self._tail - 1] = None
+            self._tail = (self._tail - 1) % self._max_n
+            self._size -= 1
             return x
 
 
@@ -81,11 +81,11 @@ class Deque:
         if self.is_empty():
             return 'error'
         else:
-            head = self.head + 1 if self.head + 1 != self.max_n else 0
-            x = self.deque[head]
-            self.deque[head] = None
-            self.head = (self.head + 1) % self.max_n
-            self.size -= 1
+            head = self._head + 1 if self._head + 1 != self._max_n else 0
+            x = self._deque[head]
+            self._deque[head] = None
+            self._head = (self._head + 1) % self._max_n
+            self._size -= 1
             return x
 
 

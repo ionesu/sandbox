@@ -67,7 +67,7 @@ Input example:
 class Calculator:
 
     def __init__(self):
-        self.items = []
+        self._items = []
 
 
     def push(self, item):
@@ -77,17 +77,17 @@ class Calculator:
         append to items calculation of 2 previous items
         """
         if item.lstrip('-').isdigit():
-            self.items.append(item)
+            self._items.append(item)
         else:
-            self.items.append(str(eval(self.pop(-2) + (item if item != '/' else '//') + self.pop(-1))))
+            self._items.append(str(eval(self.pop(-2) + (item if item != '/' else '//') + self.pop(-1))))
 
 
     def pop(self, index):
-        return self.items.pop(index)
+        return self._items.pop(index)
 
 
     def peek(self):
-        return self.items[-1]
+        return self._items[-1]
 
 
 def read_input() -> list:
