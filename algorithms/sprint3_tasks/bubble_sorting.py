@@ -46,7 +46,9 @@ def bubble_sorting(n: int, array: List[int]):
                 array[i + 1] = element
                 array[i] = next_element
 
-        if old_array != array:
+        if j == 1:
+            print(' '.join(map(str, array)))
+        elif old_array != array:
             print(' '.join(map(str, array)))
 
 
