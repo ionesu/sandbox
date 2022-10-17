@@ -1,4 +1,6 @@
 """
+https://contest.yandex.ru/contest/23815/run-report/72230156/
+
 Alla made a mistake when copying from one data structure to another. She stored an array of numbers in a ring buffer.
 The array was sorted in ascending order, and it was possible to find an element in it in logarithmic time.
 Alla copied the data from the ring buffer into a regular array, but shifted the data of the original sorted sequence.
@@ -28,6 +30,13 @@ The function must return the index of the element equal to k, if there is one in
 If the element is not found, the function should return -1.
 The array cannot be changed.
 To cut off inefficient solutions, your function will run from 100,000 to 1,000,000 times.
+
+Input example:
+9
+5
+19 21 100 101 1 4 5 7 12
+
+Algorithm complexity O(logn)
 """
 
 
