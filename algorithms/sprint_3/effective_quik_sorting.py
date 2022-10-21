@@ -47,6 +47,8 @@ fi fine
 Fi and Pi are integers ranging from 0 to 109.
 Output Format
 For a sorted list of participants, print their logins in order, one per line.
+Algorithm complexity O(nlogn)
++ result printing complexity O(n)
 """
 import sys
 import random
