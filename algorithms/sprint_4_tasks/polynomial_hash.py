@@ -20,18 +20,17 @@ Input Example:
 a
 """
 
-from typing import Tuple
-
-
 def polynomial_hash(q: int, R: int, text: str) -> int:
     before_mod = 0
     len_text = len(text)
-    for index, i in enumerate(text):
-        before_mod += ord(i) * (q ** (len_text - (index + 1)))
+    x = 1
+    for i in text:
+        before_mod += ord(i) * (q ** (len_text - x))
+        x += 1
     return before_mod % R
 
 
-def read_input() -> Tuple[int, int, str]:
+def read_input():
     return int(input()), int(input()), input()
 
 
