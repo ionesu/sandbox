@@ -35,7 +35,7 @@ VALUES_DICT = {
 }
 
 
-def combinations(numbers):
+def combinations(numbers: str) -> list:
     if not numbers:
         return ['']
 
