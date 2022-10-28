@@ -1,4 +1,7 @@
 """
+https://contest.yandex.ru/contest/24414/run-report/73252017/
+I have a problem here with a memory in the last test 27 :(
+
 You can use hash tables from the standard libraries for this problem.
 
 Timofey writes his search engine.
@@ -41,6 +44,12 @@ free tea for everyone
 i like black coffee without milk
 everyone loves new year
 mary likes black coffee without milk
+
+Operations complexity:
+filenames_words_index - О(n^2)
+search_system - О(m)
+
+Spatial complexity: O(n)
 """
 from collections import Counter, defaultdict
 from typing import List, Tuple, Set
