@@ -17,7 +17,7 @@ def substring(text: str) -> int:
     max_s = ''
     cnt = 0
     max_cnt = 0
-    begin, end = 0, len(text)-1
+    begin, end = 0, len(text) - 1
 
     while begin <= end:
         if text[begin] not in max_s:
@@ -35,9 +35,13 @@ def substring(text: str) -> int:
     return max_cnt
 
 
-def read_input() -> str:
-    return input()
-
+# In contest read_input() not passing TL
+# def read_input() -> str:
+#     return input()
+#
+#
+# if __name__ == '__main__':
+#     print(substring(read_input()))
 
 if __name__ == '__main__':
-    print(substring(read_input()))
+    print(substring(input()))
