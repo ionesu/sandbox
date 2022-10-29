@@ -107,7 +107,7 @@ class HashTable:
         return data
 
 
-def read_input():
+def read_commands():
     max_size = int(input())
     hashtable = HashTable(max_size)
 
@@ -123,4 +123,4 @@ def read_input():
 
 
 if __name__ == '__main__':
-    read_input()
+    read_commands()

@@ -47,7 +47,7 @@ mary likes black coffee without milk
 
 Operations complexity:
 filenames_words_index - О(n^2)
-search_system - О(m)
+search_system - О(mlogm) - where is 'm' - quantity of queries
 
 Spatial complexity: O(n)
 """
