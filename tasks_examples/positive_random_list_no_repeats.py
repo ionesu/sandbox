@@ -1,3 +1,15 @@
+"""
+Random Numbers
+Write a program that accepts as an input an integer N.
+The program needs to return N different random positive integers,
+such that each integer in the output is less than or equal to N.
+
+For example, for N=3
+Valid output for N=3: [1, 2, 3]
+Another valid output for N=3 [3, 2,1]
+Invalid outputs would be [1, 1, 3] or [2, 4, 1]
+"""
+
 import random
 
 
