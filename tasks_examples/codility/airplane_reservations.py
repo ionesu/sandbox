@@ -25,8 +25,6 @@ def solution(N: int, S: str) -> int:
         if r[-1] in 'DEFG':
             mid.add(r)
 
-    print(left, right, mid)
-    print((left | right | mid))
     for i in (left | right | mid):
         # check if seat not in 'BCDE' and not in 'FGHJ' than 2 families could seat in a row
         if i not in left and i not in right:
