@@ -63,18 +63,14 @@ class User:
         return -self.solved, self.errors, self.username
 
     def __gt__(self, other):
-        """
-        "Greater than" - means below in the list.
-         This user has less Pi, greater Fi, and lesser alphabetical name.
-        """
+        # "Greater than" - means below in the list.
+        #  This user has less Pi, greater Fi, and lesser alphabetical name.
 
         return self.key() > other.key()
 
     def __lt__(self, other):
-        """
-        "Lesser than" - means higher in the list.
-         This user has greater Pi, less Fi, and greater alphabetical name.
-        """
+        # "Lesser than" - means higher in the list.
+        #  This user has greater Pi, less Fi, and greater alphabetical name.
 
         return self.key() < other.key()
 
