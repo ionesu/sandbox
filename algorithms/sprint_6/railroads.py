@@ -32,6 +32,8 @@ Time complexity: O(V+E)
 Space complexity: O(V)
 """
 
+from collections import defaultdict
+
 WHITE = 0
 GRAY = 1
 BLACK = 2
@@ -73,7 +75,7 @@ def dfs_is_cyclic(graph, n):
 
 if __name__ == "__main__":
     number_of_cities = int(input())
-    neighbours = {city: [] for city in range(number_of_cities)}
+    neighbours = defaultdict(list)
 
     for i in range(number_of_cities - 1):
         for j, road_type in enumerate(input()):
