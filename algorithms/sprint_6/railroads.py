@@ -1,5 +1,6 @@
 """
 https://contest.yandex.ru/contest/25070/run-report/79181102/
+time-limit-exceeded on tet 30 :(
 
 There are n cities in country X, which are assigned numbers from 1 to n.
 The capital of the country has number n. Railways are laid between the cities.
