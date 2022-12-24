@@ -15,7 +15,8 @@ if LOCAL:
 def depth(root) -> int:
     if root is None:
         return 0
-    return max(solution(root.left), solution(root.right)) + 1
+
+    return max(depth(root.left), depth(root.right)) + 1
 
 
 def solution(root) -> bool:
