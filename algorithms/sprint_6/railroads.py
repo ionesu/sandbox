@@ -30,7 +30,7 @@ YES
 
 Time complexity: O(V+E)
 
-Space complexity: O(V)
+Space complexity: O(E*V) - adjacency list
 """
 
 from collections import defaultdict
@@ -76,13 +76,13 @@ def dfs_is_cyclic(graph, n):
 
 if __name__ == "__main__":
     number_of_cities = int(input())
-    neighbours = defaultdict(list)
+    adjacency = defaultdict(list)
 
     for i in range(number_of_cities - 1):
         for j, road_type in enumerate(input()):
             if road_type == NARROW_ROAD:
-                neighbours[i + j + 1].append(i)
+                adjacency[i + j + 1].append(i)
             if road_type == WIDE_ROAD:
-                neighbours[i].append(i + j + 1)
+                adjacency[i].append(i + j + 1)
 
-    print('NO' if dfs_is_cyclic(neighbours, number_of_cities) else 'YES')
+    print('NO' if dfs_is_cyclic(adjacency, number_of_cities) else 'YES')

@@ -25,7 +25,9 @@ Output example:
 
 Time complexity: O(E*logV)
 
-Space complexity: O(n) + O(E*V)
+Space complexity:
+Heap storage - O(n)
+Adjacency list - O(E*V)
 
 """
 
